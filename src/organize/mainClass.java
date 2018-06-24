@@ -27,5 +27,19 @@ public class mainClass {
         Scanner sc=new Scanner(System.in);
         int sum=red.redtosingleDigit(sc.nextInt());
         System.out.println("One digit sum is: "+sum);
+
+        ArrayList<Integer> marks = new ArrayList<Integer>();
+        convertArrayListtoArray cal=new convertArrayListtoArray();
+        sumofArray sa=new sumofArray();
+        System.out.println("Enter the size of the array");
+        int size=sc.nextInt();
+        System.out.println("Enter the "+ size + " elements");
+        for(int i=0;i<size;i++) {
+              marks.add( sc.nextInt()) ;
+        }
+        int[] ret=cal.convertALtoA(marks);
+        int sumofarray=sa.sumArray(ret,size);
+        System.out.println("Sum of the elements in the array is: " + sumofarray);
+
     }
 }
