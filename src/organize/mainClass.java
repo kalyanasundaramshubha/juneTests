@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class mainClass {
     public static void main(String[]args){
-        int[] ar1={8,0,1,0,-1,6,0,9} ;
+        /*int[] ar1={8,0,1,0,-1,6,0,9} ;
 
         rearrangeArray ra=new rearrangeArray();
         int[] ar2= ra.rearrange(ar1);
@@ -41,5 +41,16 @@ public class mainClass {
         int sumofarray=sa.sumArray(ret,size);
         System.out.println("Sum of the elements in the array is: " + sumofarray);
 
+        String[] words=new String[]{"gin", "zen", "gig", "msg"};
+        int umc=morseCode.uniquemorseRepresentations(words);
+        System.out.println("\n" +umc );
+
+        String str="fooboofoodgood";
+        String cstr= compressionQ.compressed(str);
+        System.out.println("\n "+ cstr);*/
+
+        String str="ooopppp";
+        char s=charmaxString.maxcharacterString(str);
+        System.out.println("\n"+ s);
     }
 }

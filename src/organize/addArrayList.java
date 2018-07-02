@@ -13,8 +13,9 @@ public class addArrayList {
 
     }
     public ArrayList<String> removeFromarray(ArrayList<String> names){
-        ArrayList<String> stdname=new ArrayList<String>();
-        stdname.remove(1);
+        ArrayList<String> stdname1=new ArrayList<String>();
+        int i=1;
+        stdname1.remove(names.indexOf(i));
         return names;
     }
 }

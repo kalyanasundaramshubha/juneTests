@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-//package com.shubha.practice;
+//package practice;
 
 public class arraysorting {
 
