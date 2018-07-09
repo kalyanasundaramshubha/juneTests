@@ -1,6 +1,8 @@
 package organize1;
 
 import java.util.Arrays;
+import java.util.HashMap;
+
 import static org.testng.Assert.assertEquals;
 
 public class mainClass1 {
@@ -37,7 +39,7 @@ public class mainClass1 {
         int[] rl= rotLeft.rotleft(arr,d);
         for(int i=0;i<arr.length;i++){
             System.out.println("\n"+ rl[i] );
-        }*/
+        }
 
         String str="tarbkkkktplooo";
         String newstring=charactersNotCont.charNotcont2(str);
@@ -45,7 +47,11 @@ public class mainClass1 {
 
         assertEquals(charactersNotCont.charNotcont2("a"),"a");
         assertEquals(charactersNotCont.charNotcont2("tarbkkkktplooo"),"tarbtpl");
-
+        String[] m={"give", "me", "one", "grand", "today", "night","give"};
+        String[] n={"give", "one", "grand", "today","give"};
+        HashMap<String,Integer> hm= new HashMap<String, Integer>();
+        hm=ransomNote.ransomeNoteMessage(m,n);
+        System.out.println("\n" + hm.get("give"));*/
 
     }
 }

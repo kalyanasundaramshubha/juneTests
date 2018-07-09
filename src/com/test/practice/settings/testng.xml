@@ -7,6 +7,7 @@
             <class name = "com.test.practice.sampleTest"/>
             <class name = "com.test.practice.compressionQTest"></class>
             <class name = "com.test.practice.removeDupsfrom2strTest"></class>
+            <class name= "com.test.practice.makeAnagramsTest"></class>
         </classes>
     </test>
 </suite>

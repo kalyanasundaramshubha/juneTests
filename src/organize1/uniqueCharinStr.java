@@ -23,9 +23,7 @@ public class uniqueCharinStr {
                         break;
                     }
                 }
-
             }
-
             if(foundMatch==false) {
                 return i;
             }

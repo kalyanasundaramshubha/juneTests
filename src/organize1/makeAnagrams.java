@@ -1,52 +1,77 @@
 package organize1;
 
+import java.util.Arrays;
+
+import static java.lang.Math.abs;
+
 public class makeAnagrams {
 
     public static int makeAnagramsfrom2str(String a, String b)
     {
-        int cur=0,pos=0, retval=0, setlen=a.length();
+        int count=0;
+        int[]freqa=new int[26];
+        int[]freqb=new int[26];
 
-        StringBuilder  bmatch= new StringBuilder();
-        StringBuilder  amatch= new StringBuilder();
-        /*for(int i=0;i<a.length();i++)
-        {
-            amatch=amatch.append(a.charAt(i));
-        }
-        for(int i=0;i<b.length();i++)
-        {
-            bmatch=bmatch.append(b.charAt(i));
-        }*/
         if(a.length()==0||b.length()==0)
         {
             return 0;
         }
-
-        if(a.length()<b.length())
+        for( int i=0; i<a.length();i++)
         {
-            setlen=b.length();
+            freqa[a.charAt(i)-'a']++;
         }
-        for( int i=0; i<setlen;i++)
+        for(int i=0;i<b.length();i++)
         {
-            while (cur < a.length() && pos < b.length())
+            freqb[b.charAt(i)-'a']++;
+        }
+        for(int i=0;i<freqa.length;i++)
+        {
+            if(freqa[i]!=freqb[i])
             {
-                if (a.charAt(cur) != b.charAt(pos))
+                count=count+abs(freqa[i]-freqb[i]);
+            }
+
+        }
+        return count;
+
+    }
+
+    public static int makeAnagramsusingsort(String str1, String str2)
+    {
+            char[] a=str1.toCharArray();
+            char[] b=str2.toCharArray();
+            Arrays.sort(a);
+            Arrays.sort(b);
+            int cur=0, pos=0,count=0;
+            while( cur<a.length&&pos<b.length)
+            {
+                if(a[cur]!=b[pos])
                 {
-                    pos++;
-                    if(pos==b.length())
+                    if (a[cur] < b[pos])
                     {
-                        amatch.append(a.charAt(cur));
+                        count++;
+                        cur++;
+                    }
+                    else
+                    {
+                       count++;
+                       pos++;
                     }
                 }
                 else
                 {
-                    bmatch.append(b.charAt(pos));
-                    break;
+                        cur++;
+                        pos++;
                 }
             }
-            cur++;
-            pos = 0;
-        }
-        retval=amatch.length()+(b.length()-bmatch.length());
-        return retval;
+            if(cur==(a.length))
+            {
+                count=count+(b.length-pos);
+            }
+            if(pos==(b.length))
+            {
+                count=count+(a.length-cur);
+            }
+            return count;
     }
 }
