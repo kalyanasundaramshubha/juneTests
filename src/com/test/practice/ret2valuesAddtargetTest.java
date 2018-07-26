@@ -26,6 +26,6 @@ public class ret2valuesAddtargetTest {
     {
         int[] num={2, 5, 5, 11, 15};
         int[] retval={1,2};
-        Assert.assertEquals(ret2ValuesAddTarget.ret2Values(num,10),retval);
+        Assert.assertEquals(ret2ValuesAddTarget.hasPairValueSum(num,10),true);
     }
 }

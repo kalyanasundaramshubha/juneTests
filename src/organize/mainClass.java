@@ -47,10 +47,25 @@ public class mainClass {
 
         String str="fooboofoodgood";
         String cstr= compressionQ.compressed(str);
-        System.out.println("\n "+ cstr);*/
+        System.out.println("\n "+ cstr);
 
         String str="ooopppp";
         char s=charmaxString.maxcharacterString(str);
         System.out.println("\n"+ s);
+
+        int num=88;
+        int[]fac=FactorInteger.factorsOfInteger(num);
+        for(int i=0;i<fac.length;i++)
+        {
+            System.out.println("\n"+fac[i]);
+        }
+        */
+
+        int[] ar={2,1,3,5,0,-1};
+        int lownegnum=FindNum.findLowNeg(ar);
+        System.out.println("lowest negative number in an array is: "+lownegnum);
+        int highposnum=FindNum.findHighPosNum(ar);
+        System.out.println("Highest positive number in an array is: "+highposnum);
+
     }
 }

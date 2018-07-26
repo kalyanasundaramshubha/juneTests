@@ -53,5 +53,14 @@ public class mainClass1 {
         hm=ransomNote.ransomeNoteMessage(m,n);
         System.out.println("\n" + hm.get("give"));*/
 
+
+        /*int[][]arr={{1, 2, 3, 4, 6},
+                {5,4,3,5,7},
+                { 6, 5, 9,8,9},
+                {9,8,7,6,1},
+                {1,8,3,6,2}};
+
+        MatrixDisplay.squareMatrixSlicing(arr);*/
+
     }
 }
