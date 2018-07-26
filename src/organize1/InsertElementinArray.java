@@ -2,27 +2,22 @@ package organize1;
 
 public class InsertElementinArray {
 
-    public static int[] insertElement(int [] a, int NA, int NB, int addel)
+    public static String insertElement(int [] a, int NA, int NB, int addel)
     {
-        int  arrnew []=new int[a.length+1];
-        int diff;
 
-        for(int i=0; i<a.length;i++)
+        int diff;
+        StringBuilder sb=new StringBuilder();
+        sb.append(a[0]);
+        for(int i=1; i<a.length;i++)
         {
-            if(a[i]==NA && a[i+1]==NB)
+            if(a[i]==NB && a[i-1]==NA)
             {
-                arrnew[i+1]=addel;
+                sb.append(addel);
 
             }
-
+            sb.append(a[i]);
         }
-
-
-        for(int i=arrnew.length;i<a.length;i++)
-        {
-            arrnew[i]=a[i-1];
-        }
-        return arrnew;
+        return sb.toString();
 
     }
 }

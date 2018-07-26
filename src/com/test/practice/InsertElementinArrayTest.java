@@ -8,8 +8,8 @@ public class InsertElementinArrayTest {
     @Test
     public void verifyInserteleArray()
     {
-        int[] a= {4,5,8,3,9};
-        int[] b= {4,66,5,8,3,9};
+        int[] a= {4,8,4,5,9};
+        String b= "4846659";
         Assert.assertEquals(InsertElementinArray.insertElement(a,4,5,66),b );
     }
 }
