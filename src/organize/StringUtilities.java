@@ -209,5 +209,67 @@ public class StringUtilities {
         return sb.toString();
     }
 
+    public static String superReducedString(String s) {
+        StringBuilder sb=new StringBuilder();
+        int count=1;
+        sb.append(s.charAt(0));
+        for (int i=1; i<s.length();i++)
+        {
+            if(s.charAt(i)==s.charAt(i-1))
+            {
+                count++;
+            }
+            else
+            {
+                if(count%2==0)
+                {
+                  sb.deleteCharAt(sb.length()-1);
+                }
+                sb.append(s.charAt(i));
+                count=1;
+            }
+
+        }
+        if(count%2==0)
+        {
+            sb.deleteCharAt(s.length()-1);
+        }
+        return sb.toString();
+
+
+    }
+    public static String reduceStr(String s)
+    {
+        StringBuilder sb=new StringBuilder();
+        int count=1;
+        String newstr;
+        for(int i=1;i<s.length();i++)
+        {
+            if(s.charAt(i)==s.charAt(i-1))
+            {
+                count++;
+
+            }
+            else
+            {
+                if(count%2!=0)
+                {
+                    sb.append(s.charAt(i-1));
+
+                }
+                count=1;
+
+            }
+
+        }
+        if(count%2!=0)
+        {
+            sb.append(s.charAt(s.length()-1));
+        }
+
+
+        return sb.toString();
+    }
+
 
 }
