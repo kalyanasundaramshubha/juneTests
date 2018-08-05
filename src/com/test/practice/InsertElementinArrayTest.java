@@ -12,4 +12,11 @@ public class InsertElementinArrayTest {
         String b= "4846659";
         Assert.assertEquals(InsertElementinArray.insertElement(a,4,5,66),b );
     }
+    @Test
+    public void verifyInserteleArray1()
+    {
+        int[] a= {4,5,9,4,5};
+        int[] b= {4,66,5,9,4,5};
+        Assert.assertEquals(InsertElementinArray.insertEle(a,4,5,66),b );
+    }
 }

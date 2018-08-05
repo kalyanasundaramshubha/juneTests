@@ -22,10 +22,16 @@ public class StringUtilitiesTest {
         Assert.assertEquals(StringUtilities.firstOcc("ABCDBEF"),'B');
     }
 
-    @Test
+    @Test(enabled=false)
     public void verifyMergeStrings()
     {
         Assert.assertEquals(StringUtilities.mergeStringsAlt("shubha","abc"),"sahbucbha");
+    }
+
+    @Test
+    public void verifySuperReducedStr()
+    {
+        Assert.assertEquals(StringUtilities.reduceStr("bccb")," ");
     }
 
 
